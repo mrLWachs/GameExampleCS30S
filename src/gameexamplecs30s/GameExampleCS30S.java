@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+/** required package class namespace */
 package gameexamplecs30s;
 
 
 /**
- * GameExampleCS30S.java - 
+ * GameExampleCS30S.java - an advanced gaming example that could be 
+ * adapted into a final project. It uses advanced code, but code at the 
+ * level learned in this course.
  *
  * @author Mr. Wachs 
  * @since 19-Dec-2019 
  */ 
-public class GameExampleCS30S {
+public class GameExampleCS30S 
+{
 
     /**
+     * Main method for the project
+     * 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
