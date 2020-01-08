@@ -14,7 +14,7 @@ package movement2;
  * @author Mr. Wachs
  * @since Jan. 8, 2020, 7:28:19 a.m.
  */
-public class NewMain 
+public class MainClass 
 {
 
     /**

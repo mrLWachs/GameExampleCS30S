@@ -1,6 +1,6 @@
 
 /** required package class namespace */
-package movement3.gameexamplecs30s;
+package movement3.game;
 
 /** required imports */
 import javax.swing.JLabel;

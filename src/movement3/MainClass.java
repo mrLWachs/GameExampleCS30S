@@ -1,17 +1,19 @@
 
 /** required package class namespace */
-package movement3.gameexamplecs30s;
+package movement3;
+
+import movement3.game.UserInterface;
 
 
 /**
- * GameExampleCS30S.java - an advanced gaming example that could be 
+ * MainClass.java - an advanced gaming example that could be 
  * adapted into a final project. It uses advanced code, but code at the 
  * level learned in this course.
  *
  * @author Mr. Wachs 
  * @since 19-Dec-2019 
  */ 
-public class GameExampleCS30S 
+public class MainClass 
 {
 
     /**
@@ -20,7 +22,7 @@ public class GameExampleCS30S
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        UserInterface ui = new UserInterface();
+        new UserInterface();
     }
 
 }
