@@ -1,20 +1,20 @@
 
 /** required package class namespace */
-package gameexamplecs30s;
+package movement3.gameexamplecs30s;
 
 /** required imports */
+import movement3.tools.GameObject;
 import java.awt.Color;
 import javax.swing.JLabel;
-import tools.GameObject;
 
 
 /**
- * Wall.java - representation of a wall in pacman
+ * Background.java - representation of a background in a game 
  *
  * @author Mr. Wachs 
  * @since 15-May-2019 
  */
-public class Wall extends GameObject
+public class Background extends GameObject
 {
 
     /**
@@ -22,9 +22,9 @@ public class Wall extends GameObject
      * 
      * @param label the label associated with the image for the game object
      */
-    public Wall(JLabel label) {
+    public Background(JLabel label) {
         super(label);
-        sprite.setColor(Color.blue);
+        sprite.setColor(Color.black);
     }
-
+    
 }

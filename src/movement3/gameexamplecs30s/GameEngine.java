@@ -1,13 +1,13 @@
 
 /** required package class namespace */
-package gameexamplecs30s;
+package movement3.gameexamplecs30s;
 
 /** required imports */
 import java.awt.event.KeyEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import tools.FileHandler;
-import tools.MediaPlayer;
+import movement3.tools.FileHandler;
+import movement3.tools.MediaPlayer;
 
 
 

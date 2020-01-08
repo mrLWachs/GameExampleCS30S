@@ -1,15 +1,15 @@
 
 /** required package class namespace */
-package gameexamplecs30s;
+package movement3.gameexamplecs30s;
 
 /** required imports */
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import tools.Animation;
-import tools.Directions;
-import tools.FileHandler;
-import tools.GameCharacter;
-import tools.MediaPlayer;
+import movement3.tools.Animation;
+import movement3.tools.Directions;
+import movement3.tools.FileHandler;
+import movement3.tools.GameCharacter;
+import movement3.tools.MediaPlayer;
 
 
 /**

@@ -1,11 +1,11 @@
 
 /** required package class namespace */
-package gameexamplecs30s;
+package movement3.gameexamplecs30s;
 
 /** required imports */
 import javax.swing.JLabel;
-import tools.Animation;
-import tools.GameObject;
+import movement3.tools.Animation;
+import movement3.tools.GameObject;
 
 
 /**
