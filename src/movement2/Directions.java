@@ -4,18 +4,17 @@ package movement2;
 
 
 /**
- * Directions.java - directional constants for movement
+ * Directions.java - directional constants for movement. The use of "static" 
+ * means we can use the constants without creating an object of this class. 
+ * These are used in the GameCharacter class.
  *
  * @author Mr. Wachs 
- * @since 14-May-2019 
+ * @since Jan. 8, 2020, 8:43:53 a.m.
  */
 public class Directions 
 {
     
-    // no directional movement
-    public static final int STOP = 0;
-    
-    // 4 or 2 directional game constants
+    public static final int STOP  = 0;
     public static final int LEFT  = 1;
     public static final int RIGHT = 2;
     public static final int UP    = 3;

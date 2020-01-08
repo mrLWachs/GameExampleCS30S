@@ -3,7 +3,12 @@
 package movement2;
 
 /** required imports */
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 
 /**
@@ -29,7 +34,7 @@ public class UserInterface extends javax.swing.JFrame
         // The method below is called in the constructor that NetBeans wrote 
         // to jump to my own custom method to complete the process of setting 
         // up the inital frame
-        setFrame();
+        startUp();
     }
 
     /** This method is called from within the constructor to
@@ -188,18 +193,141 @@ public class UserInterface extends javax.swing.JFrame
     // GLOBAL VARIABLES:
     // =================
     // Usially these are made at the top of the class (and they still can), but
-    // I have made them here so all our added code is in one place. 
+    // I have made them here (under the NetBeans generated code) so all our 
+    // added code is in one place. As well, this code will use objects from the 
+    // other classes in this project. These other classes will have to be 
+    // added to the project (right click and add new class to the project
+    // "package") for GameObject and GameCharacter. Also a timer object is 
+    // used (which must be imported from javax.swing.Timer).
     
+    private GameCharacter   hero;       // for the hero, it is a "character"
+    private GameObject      objective;  // the objective is just a "object"
+    private GameCharacter[] enemies;    // an array of the enemies
+    private GameObject[]    walls;      // an array of all walls
+    private Timer           timer;      // game timer controls game loop
     
-    private void setFrame() {
-        setSize(690,725);
-        setLocationRelativeTo(null);
-        setResizable(false);
-        setVisible(true);
+    private final int FRAME_WIDTH  = 690;   // constants for frame (form) size 
+    private final int FRAME_HEIGHT = 725;
+    private final int DELAY        = 100;   // the delay for the game timer
+    
+        
+    /**
+     * When the form (frame) starts up, after the NetBeans constructor, it 
+     * runs this code to complete the look and feel of the form and also 
+     * sets up some of the other class objects for the game
+     */
+    private void startUp() {
+        setSize(FRAME_WIDTH,FRAME_HEIGHT);  // make the correct size
+        setLocationRelativeTo(null);        // center on the screen
+        setResizable(false);                // remove maximize button
+        setObjects();                       // prepare game class objects
+        setVisible(true);                   // finally, make frame visible
     }
 
-    private void keyPress(KeyEvent evt) {
-        
+    /**
+     * When a key is pressed on the frame it transfers the logic of what to
+     * do to the hero object to take care of what to do
+     * 
+     * @param event the keyboard event the user did
+     */
+    private void keyPress(KeyEvent event) {
+        hero.keyPress(event.getKeyCode());      // transfer the key code logic
+    }
+
+    /**
+     * Sets the other class objects to instances of those classes to help
+     * divide up the logic into those other classes
+     */
+    private void setObjects() {        
+        // create names for the exisiting labels from the designer by 
+        // importing the JLabel class (use lightbulb) and then assign the
+        // name to that object. As well, for groups of labels (like the 
+        // walls) I will use a JLabel array
+        JLabel   heroLabel      = jLabel11;
+        JLabel   objectiveLabel = jLabel2;
+        JLabel[] enemyLabels    = { jLabel12, jLabel10 };        
+        JLabel[] wallLabels     = { jLabel1,jLabel3,jLabel4,jLabel5,
+                                    jLabel6,jLabel7,jLabel8,jLabel9 };        
+        // Now instantiate the objects passing the label as a parameter to
+        // the class. This will show up as an erro initially, but then you can 
+        // use the lightbulb to create the method in the other class.
+        hero      = new GameCharacter(heroLabel);
+        objective = new GameObject(objectiveLabel);
+        // Arrays of these objects are set up and set to the same sizes as the 
+        // matching label arrays
+        enemies = new GameCharacter[enemyLabels.length];
+        walls   = new GameObject[wallLabels.length];
+        // Now traverse (loop) through the arrays and instantiate the objects
+        // in the arrays and pass the JLabel from the other array for that 
+        // object
+        for (int i = 0; i < enemies.length; i++) {
+            enemies[i] = new GameCharacter(enemyLabels[i]);
+            // Start the enemies off in a random direction, use the lightbulb
+            // to auto create this method in the other GameCharacter class
+            enemies[i].randomDirection();   
+        }
+        for (int i = 0; i < walls.length; i++) {
+            walls[i] = new GameCharacter(wallLabels[i]);
+        }        
+        // now the timer is set up to run the entire game loop
+        timer = new Timer(DELAY, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // The "tick" method is written (do not use lightbulb) below 
+                // this method
+                tick();
+            }
+        });
+        // now start the timer running
+        timer.start();
+    }
+    
+    /**
+     * The actions that take place every "tick" of the game timer (sometimes 
+     * called a game loop) which moves all objects and checks for collisions
+     */
+    private void tick() {
+        // Make the hero move it's coordinates by using the lightbulb to 
+        // create a method in the GameCharacter class
+        hero.move();        
+        // Now check for collison with objective (again use lightbulb to
+        // create a method in the other class)
+        if (hero.isColliding(objective)) {            
+            // collision occured, stick to the objective (auto create method)
+            hero.stickTo(objective);
+            // auto create method to update position on screen
+            hero.redraw(); 
+            timer.stop();                                   // stop the timer           
+            JOptionPane.showMessageDialog(this, "You win!"); 
+            System.exit(0);                                 // end program
+        }        
+        // Now check for collison with all walls by traversing the array
+        for (int i = 0; i < walls.length; i++) {
+            if (hero.isColliding(walls[i])) {       // check for wall collision
+                hero.bounceOff(walls[i]);           // auto create method
+                i = walls.length;                   // leave loop early
+            }
+        }
+        // Now traverse through all enemies
+        for (int i = 0; i < enemies.length; i++) {
+            enemies[i].move();                      // move that enemy            
+            if (hero.isColliding(enemies[i])) {     // check if hit hero
+                hero.stickTo(enemies[i]);           // stick to hero
+                timer.stop();                       // stop timer
+                JOptionPane.showMessageDialog(this, "You lose!");
+                System.exit(0);                     // end program
+            }
+            // Now traverse all walls for this enemy (nested loop)
+            for (int j = 0; j < walls.length; j++) {
+                if (enemies[i].isColliding(walls[j])) { // wall collision
+                    enemies[i].bounceOff(walls[j]);     // bounce off wall
+                    enemies[i].randomDirection();       // change direction
+                    j = walls.length;                   // leave loop early
+                }
+            }
+            enemies[i].redraw();                        // reposition enemy
+        }     
+        hero.redraw();                                  // reposition hero
     }
 
 }
