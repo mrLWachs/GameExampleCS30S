@@ -169,7 +169,7 @@ public class UserInterface extends javax.swing.JFrame
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         // You also need to right click the JFrame (form) and go to 
         // Events -> Key -> KeyPressed to access this method which then again
-        // jumps to my own method beow. All further code is not below the
+        // jumps to my own method below. All further code is not below the
         // code that the NetBeans designer wrote for us
         keyPress(evt);
     }//GEN-LAST:event_formKeyPressed
@@ -249,7 +249,7 @@ public class UserInterface extends javax.swing.JFrame
         JLabel[] wallLabels     = { jLabel1,jLabel3,jLabel4,jLabel5,
                                     jLabel6,jLabel7,jLabel8,jLabel9 };        
         // Now instantiate the objects passing the label as a parameter to
-        // the class. This will show up as an erro initially, but then you can 
+        // the class. This will show up as an error initially, but then you can 
         // use the lightbulb to create the method in the other class.
         hero      = new GameCharacter(heroLabel);
         objective = new GameObject(objectiveLabel);
