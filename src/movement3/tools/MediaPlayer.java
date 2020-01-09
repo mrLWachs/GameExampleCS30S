@@ -57,7 +57,9 @@ public class MediaPlayer
         } 
     }
 
-    /** Stops any playing audio clip */
+    /** 
+     * Stops any playing audio clip 
+     */
     public void stop() {
         if (clip != null) clip.stop();
     }

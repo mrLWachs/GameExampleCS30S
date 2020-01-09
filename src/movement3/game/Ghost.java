@@ -50,12 +50,12 @@ public class Ghost extends GameCharacter
         this.file   = file; 
         mover.randomDirection();            // start in a random direction
         String[] ghostImages = {
-            "/media/ghost01.png",
-            "/media/ghost02.png",
-            "/media/ghost03.png",
-            "/media/ghost04.png",
-            "/media/ghost05.png",
-            "/media/ghost06.png"
+            Globals.GHOST_IMAGES[0],
+            Globals.GHOST_IMAGES[1],
+            Globals.GHOST_IMAGES[2],
+            Globals.GHOST_IMAGES[3],
+            Globals.GHOST_IMAGES[4],
+            Globals.GHOST_IMAGES[5]
         };                                  // array of animation images
         int delay = 2000;                   // animation delay
         Animation[] animations = new Animation[1];  // create animation
@@ -65,7 +65,9 @@ public class Ghost extends GameCharacter
         spawn();                            // spawn this ghost
     }
 
-    /** The action this ghost does in it's timer */
+    /** 
+     * The action this ghost does in it's timer 
+     */
     @Override
     public void action() {
         mover.move();                               // move coordinates
@@ -79,7 +81,7 @@ public class Ghost extends GameCharacter
         if (detector.isOverLapping(pacman)) {       // checking for pacman
             pacman.mover.stop();                    // stop pacman
             pacman.sprite.animate(0);               // change pacman animation
-            player.playWAV("/media/pacman_death.wav"); // play sound
+            player.playWAV(Globals.PACMAN_DEATH_SOUND); // play sound
             String name = JOptionPane.showInputDialog("Enter name"); // get name
             String[] data = { name, "" + pacman.points };       // make array
             file.write(data);                       // save array to file

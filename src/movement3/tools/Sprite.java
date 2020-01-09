@@ -202,7 +202,9 @@ public class Sprite
         gameImage.setDebug(text, background);
     }
     
-    /** Stops all animations */
+    /** 
+     * Stops all animations 
+     */
     public void stop() {
         if (animations == null) return;                 // error trap
         for (int i = 0; i < animations.length; i++) {   // traverse animations
@@ -246,7 +248,9 @@ public class Sprite
         animations[index].restart();
     }
     
-    /** Restarts all animations back to the first frame  */
+    /** 
+     * Restarts all animations back to the first frame  
+     */
     public void restart() {
         stop();                                 // stops all animations
         restart(0);                             // restarts first animation
@@ -336,12 +340,16 @@ public class Sprite
         gameImage.setColor(color);
     }
 
-    /** removes any border for the label */
+    /** 
+     * Removes any border for the label 
+     */
     public void removeBorder() {
         gameImage.removeBorder();
     }
 
-    /** Sets the sprite to be an "invisible" but active game object */
+    /** 
+     * Sets the sprite to be an "invisible" but active game object 
+     */
     public void setClear() {
         gameImage.setClear();
     }

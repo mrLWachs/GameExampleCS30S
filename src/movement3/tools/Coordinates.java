@@ -70,12 +70,16 @@ public class Coordinates
         this(0,0,0,0,amount,direction);
     }
     
-    /** Default constructor for the class, sets class properties */
+    /** 
+     * Default constructor for the class, sets class properties 
+     */
     public Coordinates() {
         this(0,0,0,0,0,0);
     }
         
-    /** Recalculates needed movement data */
+    /** 
+     * Recalculates needed movement data 
+     */
     public void recalculate() {
         left    = x;
         top     = y;

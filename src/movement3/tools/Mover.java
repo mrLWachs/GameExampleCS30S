@@ -69,33 +69,43 @@ public class Mover
         }
     }
     
-    /** Stops all movement */
+    /** 
+     * Stops all movement 
+     */
     public void stop() {
         source.direction = Directions.STOP;
     }
     
-    /** moves the game object up */
+    /** 
+     * Moves the game object up 
+     */
     public void moveUp() {        
         source.y = source.y - source.amount;
         source.recalculate();
         source.direction = Directions.UP;
     }
     
-    /** moves the game object down */
+    /**
+     * Moves the game object down 
+     */
     public void moveDown() {        
         source.y = source.y + source.amount;
         source.recalculate();
         source.direction = Directions.DOWN;
     }
     
-    /** moves the game object left */
+    /** 
+     * Moves the game object left 
+     */
     public void moveLeft() {        
         source.x = source.x - source.amount;
         source.recalculate();
         source.direction = Directions.LEFT;
     }
     
-    /** moves the game object right */
+    /** 
+     * Moves the game object right 
+     */
     public void moveRight() {        
         source.x = source.x + source.amount;
         source.recalculate();
@@ -108,53 +118,69 @@ public class Mover
         source.direction = Directions.NORTH;
     }
     
-    /** moves the game object south */
+    /** 
+     * Moves the game object south 
+     */
     public void moveSouth() {
         moveDown();
         source.direction = Directions.SOUTH;
     }
     
-    /** moves the game object east */
+    /**
+     * Moves the game object east 
+     */
     public void moveEast() {
         moveRight();
         source.direction = Directions.EAST;
     }
     
-    /** moves the game object west */
+    /** 
+     * Moves the game object west 
+     */
     public void moveWest() {
         moveLeft();
         source.direction = Directions.WEST;
     }
     
-    /** moves the game object north east */
+    /** 
+     * Moves the game object north east 
+     */
     public void moveNorthEast() {
         moveNorth();
         moveEast();
         source.direction = Directions.NORTH_EAST;
     }
     
-    /** moves the game object south east */
+    /** 
+     * Moves the game object south east 
+     */
     public void moveSouthEast() {
         moveSouth();
         moveEast();
         source.direction = Directions.SOUTH_EAST;
     }
     
-    /** moves the game object south west */
+    /** 
+     * Moves the game object south west 
+     */
     public void moveSouthWest() {
         moveSouth();
         moveWest();
         source.direction = Directions.SOUTH_WEST;
     }
     
-    /** moves the game object west */
+    /** 
+     * Moves the game object west 
+     */
     public void moveNorthWest() {
         moveNorth();
         moveWest();
         source.direction = Directions.NORTH_WEST;
     }
     
-    /** moves the game object north north east */
+    /** 
+     * Moves the game object north north east 
+     */
     public void moveNorthNorthEast() {
         moveNorth();
         moveNorth();
@@ -162,7 +188,9 @@ public class Mover
         source.direction = Directions.NORTH_NORTH_EAST;
     }
     
-    /** moves the game object east north east */
+    /** 
+     * Moves the game object east north east 
+     */
     public void moveEastNorthEast() {
         moveEast();
         moveNorth();
@@ -170,7 +198,9 @@ public class Mover
         source.direction = Directions.EAST_NORTH_EAST;
     }
     
-    /** moves the game object east south east */
+    /** 
+     * Moves the game object east south east 
+     */
     public void moveEastSouthEast() {
         moveEast();
         moveSouth();
@@ -178,7 +208,9 @@ public class Mover
         source.direction = Directions.EAST_SOUTH_EAST;
     }
     
-    /** moves the game object south south east */
+    /** 
+     * Moves the game object south south east 
+     */
     public void moveSouthSouthEast() {
         moveSouth();
         moveSouth();
@@ -186,7 +218,9 @@ public class Mover
         source.direction = Directions.SOUTH_SOUTH_EAST;
     }
     
-    /** moves the game object south south west */
+    /** 
+     * Moves the game object south south west 
+     */
     public void moveSouthSouthWest() {
         moveSouth();
         moveSouth();
@@ -194,7 +228,9 @@ public class Mover
         source.direction = Directions.SOUTH_SOUTH_WEST;
     }
     
-    /** moves the game object west south west */
+    /** 
+     * Moves the game object west south west 
+     */
     public void moveWestSouthWest() {
         moveWest();
         moveSouth();
@@ -202,7 +238,9 @@ public class Mover
         source.direction = Directions.WEST_SOUTH_WEST;
     }
     
-    /** moves the game object west north west */
+    /** 
+     * Moves the game object west north west 
+     */
     public void moveWestNorthWest() {
         moveWest();
         moveNorth();
@@ -210,7 +248,9 @@ public class Mover
         source.direction = Directions.WEST_NORTH_WEST;
     }
     
-    /** moves the game object north north west */
+    /** 
+     * Moves the game object north north west 
+     */
     public void moveNorthNorthWest() {
         moveNorth();
         moveNorth();

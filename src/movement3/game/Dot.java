@@ -25,9 +25,9 @@ public class Dot extends GameObject
     public Dot(JLabel label) {
         super(label);
         String[] images = { 
-            "/media/dot01.png", 
-            "/media/dot02.png" 
-        };                                          // array of image files
+            Globals.DOT_IMAGES[0], 
+            Globals.DOT_IMAGES[1] 
+        };                                          // image files array
         int delay = 250;                            // animation delay
         Animation[] animations = new Animation[1];  // create animation
         animations[0] = new Animation(label, images, delay, true);

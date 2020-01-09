@@ -72,30 +72,30 @@ public class Pacman extends GameCharacter
      */
     private void setAnimations(JLabel label) {
         String[] animateUp = {
-            "/media/pacmanUp01.png",
-            "/media/pacmanUp02.png",
-            "/media/pacmanUp03.png"
+            Globals.PACMAN_UP_IMAGES[0],
+            Globals.PACMAN_UP_IMAGES[1],
+            Globals.PACMAN_UP_IMAGES[2]
         };
         String[] animateDown = {
-            "/media/pacmanDown01.png",
-            "/media/pacmanDown02.png",
-            "/media/pacmanDown03.png"
+            Globals.PACMAN_DOWN_IMAGES[0],
+            Globals.PACMAN_DOWN_IMAGES[1],
+            Globals.PACMAN_DOWN_IMAGES[2]
         };
         String[] animateLeft = {
-            "/media/pacmanLeft01.png",
-            "/media/pacmanLeft02.png",
-            "/media/pacmanLeft03.png"
+            Globals.PACMAN_LEFT_IMAGES[0],
+            Globals.PACMAN_LEFT_IMAGES[1],
+            Globals.PACMAN_LEFT_IMAGES[2]
         };
         String[] animateRight = {
-            "/media/pacmanRight01.png",
-            "/media/pacmanRight02.png",
-            "/media/pacmanRight03.png"
+            Globals.PACMAN_RIGHT_IMAGES[0],
+            Globals.PACMAN_RIGHT_IMAGES[1],
+            Globals.PACMAN_RIGHT_IMAGES[2]
         };
         String[] animateIdle = {
-            "/media/pacmanIdle01.png",
-            "/media/pacmanIdle02.png",
-            "/media/pacmanIdle03.png",
-            "/media/pacmanIdle04.png"
+            Globals.PACMAN_IDLE_IMAGES[0],
+            Globals.PACMAN_IDLE_IMAGES[1],
+            Globals.PACMAN_IDLE_IMAGES[2],
+            Globals.PACMAN_IDLE_IMAGES[3]
         };        
         int delay = 350;                            // the animations delays
         Animation[] animations = new Animation[5];  // create array
@@ -119,7 +119,9 @@ public class Pacman extends GameCharacter
         animate();                              // change animation to respond
     }
     
-    /** The action this pacman does in it's timer */
+    /** 
+     * The action this pacman does in it's timer 
+     */
     @Override
     public void action() {
         mover.move();                                   // move coordinates
@@ -135,7 +137,7 @@ public class Pacman extends GameCharacter
         for (int i = 0; i < dots.length; i++) {         // traverse dots
             if (detector.isOverLapping(dots[i])) {      // hit a dot
                 dots[i].despawn();                      // remove dot
-                player.playWAV("/media/pacman_chomp.wav"); // play sound
+                player.playWAV(Globals.PACMAN_CHOMP_SOUND); // play sound
                 points++;                               // add a point
                 if (points == dots.length) {            // check for end game
                     winGame();
@@ -145,13 +147,15 @@ public class Pacman extends GameCharacter
         redraw();                                       // re draw
     }
 
-    /** Pacman has won the game (eaten all the dots) */
+    /** 
+     * Pacman has won the game (eaten all the dots) 
+     */
     private void winGame() {
         for (int i = 0; i < ghosts.length; i++) {   // traverse ghosts
             ghosts[i].mover.stop();                 // stop all ghosts
         }
         sprite.animate(0);                          // run first animation
-        player.playWAV("/media/pacman_eatghost.wav");  // play sound
+        player.playWAV(Globals.PACMAN_EAT_GHOST_SOUND);  // play sound
         String name = JOptionPane.showInputDialog("You win!\n"
                 + "Enter name");                    // get user's name
         String[] data = { name, "" + points };      // create array
@@ -159,7 +163,9 @@ public class Pacman extends GameCharacter
         System.exit(0);                             // terminate application
     }
 
-    /** changes the animation set to the appropriate animation based on direction */
+    /** 
+     * Changes the animation set to the appropriate animation based on direction 
+     */
     private void animate() {
         if      (coordinates.direction == Directions.STOP)  sprite.animate(0);
         else if (coordinates.direction == Directions.UP)    sprite.animate(1);

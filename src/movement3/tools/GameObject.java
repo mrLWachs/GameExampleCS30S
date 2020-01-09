@@ -59,23 +59,31 @@ public class GameObject
         spawn();
     } 
         
-    /** Updates the current location of the coordinates for the image */
+    /** 
+     * Updates the current location of the coordinates for the image 
+     */
     public void update() {
         sprite.update(coordinates);
     }
     
-    /** Re-positions image in it's container based on game character's data */
+    /** 
+     * Re-positions image in it's container based on game character's data 
+     */
     public void redraw() {
         sprite.redraw(coordinates);
     }
     
-    /** Spawns the game object, makes it alive and visible */
+    /** 
+     * Spawns the game object, makes it alive and visible 
+     */
     public void spawn() {
         isAlive = true;
         sprite.show();
     }
     
-    /** De-spawns the game object, makes it not alive and invisible */
+    /** 
+     * De-spawns the game object, makes it not alive and invisible 
+     */
     public void despawn() {
         isAlive = false;
         sprite.hide();

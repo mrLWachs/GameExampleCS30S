@@ -49,7 +49,7 @@ public class GameEngine
             UserInterface ui) {
         // create objects
         player = new MediaPlayer();
-        file   = new FileHandler("/game/Media/data.txt");
+        file   = new FileHandler(Globals.DATA_FILE);
         background = new Background(backgroundLabel);
         // build the arrays
         walls  = new Wall[wallLabels.length];

@@ -77,17 +77,23 @@ public class Animation
     }
     
     
-    /** Run the animation */
+    /** 
+     * Run the animation 
+     */
     public void run() {
         timer.start();                              // internal timer starts
     }
     
-    /** Stop the animation */
+    /** 
+     * Stop the animation 
+     */
     public void stop() {
         timer.stop();                               // internal timer stops
     }
     
-    /** Restart the animation back to the first frame */
+    /** 
+     * Restart the animation back to the first frame 
+     */
     public void restart() {
         stop();                                     // stop animation
         frames[currentFrame].hide();                // hide curent image
@@ -157,7 +163,9 @@ public class Animation
         resizeToContainer();                            // resize images
     }
     
-    /** Resizes image for all animation frames to the hitbox container */
+    /** 
+     * Resizes image for all animation frames to the hitbox container 
+     */
     public void resizeToContainer() {
         for (int i = 0; i < frames.length; i++) {       // traverse frames
             frames[i].resizeToContainer();              // resize each frame
@@ -182,7 +190,9 @@ public class Animation
         return timer.isRunning();               // check internal timer property
     }
         
-    /** The timer tick action */
+    /** 
+     * The timer tick action 
+     */
     private void tick() {
         frames[currentFrame].hide();                        // hide current
         if (currentFrame < lastFrame)  currentFrame++;      // cycle through
@@ -193,7 +203,9 @@ public class Animation
         frames[currentFrame].show();                        // show new current
     }
 
-    /** Sets the timer and the FPS value from the delay value */
+    /** 
+     * Sets the timer and the FPS value from the delay value 
+     */
     private void setTimer() {
         fps = delay / frames.length;    // divides the frame rate from the delay
         timer = new Timer(fps, new ActionListener() {

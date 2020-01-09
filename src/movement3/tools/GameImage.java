@@ -93,13 +93,17 @@ public class GameImage
         resizeToContainer();                        // resize
     }
       
-    /** Shows (makes visible) the GameImage in the container */
+    /** 
+     * Shows (makes visible) the GameImage in the container 
+     */
     public void show() {
         if (imageFile != null) label.setIcon(icon); // checks for an image
         label.setVisible(true);                     // make label visible
     }
     
-    /** Hides (makes invisible) the GameImage in the container */
+    /** 
+     * Hides (makes invisible) the GameImage in the container 
+     */
     public void hide() {
         label.setIcon(null);                        // removes any image
         label.setVisible(false);                    // make label invisible
@@ -116,7 +120,9 @@ public class GameImage
         resizeToContainer();                            // resize image
     }
     
-    /** Resizes the image inside the label to match the size of the label */
+    /** 
+     * Resizes the image inside the label to match the size of the label 
+     */
     public void resizeToContainer() {
         int       width         = label.getWidth();     // get label width
         int       height        = label.getHeight();    // get label height
@@ -257,7 +263,9 @@ public class GameImage
         return new Color(r,g,b);        // return new color
     }
 
-    /** Sets the game image to be an "invisible" but active game object */
+    /** 
+     * Sets the game image to be an "invisible" but active game object 
+     */
     public void setClear() {
         label.setBorder(null);          // remove any border
         label.setIcon(null);            // remove any icon
@@ -267,7 +275,9 @@ public class GameImage
         label.setText("");              // no text
     }
 
-    /** removes any border for the label */
+    /** 
+     * Removes any border for the label 
+     */
     public void removeBorder() {
         label.setBorder(null);          // remove any border
     }
