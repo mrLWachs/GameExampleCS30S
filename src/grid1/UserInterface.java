@@ -1,15 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /** required package class namespace */
 package grid1;
 
+/** required imports */
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
+
 
 /**
- * UserInterface.java - description
+ * UserInterface.java - This is the "level 1" gaming grid example which 
+ * uses the NetBeans designer to help with building a layout quicker and 
+ * without much coding. It also keeps all the code in this class and doesn't 
+ * use any other classes. This has some advantages, but does make for longer 
+ * and less flexible code. I try to keep the code simple, it reduces the things 
+ * this project can do, but keeps the complexity (and the math) a lot 
+ * simpler. 
+ * 
+ * THE DESIGN
+ * ==========
+ * 
+ * The designer is used and a number of JLabels are added and the properties 
+ * of each are set to have a line border, horizontal alignment set to 
+ * center, opaque set to true, and a background color and/or text added. I also
+ * recommend if doing a project this way, you should take the time to right
+ * click every label and go to "Change Variable Name" and name each label
+ * so that it is easier to identify them in code later.
+ * 
+ * THE CODE
+ * ========
+ * The code can be found below. You also need to right click the JFrame (form)
+ * and go to Events -> Key -> KeyPressed to access the method for key press
+ * actions. I have tried to comment the code to explain what it does.
  *
  * @author Mr. Wachs
  * @since Jan. 9, 2020, 8:17:09 a.m.
@@ -22,6 +44,9 @@ public class UserInterface extends javax.swing.JFrame
      */
     public UserInterface() {
         initComponents();
+        // This is a call to a method written below, you can have NetBeans
+        // auto create this method by clicking on the lightbulb
+        setUp();
     }
 
     /** This method is called from within the constructor to
@@ -33,709 +58,716 @@ public class UserInterface extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        jLabel83 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
+        cellLabel00 = new javax.swing.JLabel();
+        cellLabel01 = new javax.swing.JLabel();
+        cellLabel02 = new javax.swing.JLabel();
+        cellLabel03 = new javax.swing.JLabel();
+        cellLabel04 = new javax.swing.JLabel();
+        cellLabel05 = new javax.swing.JLabel();
+        cellLabel06 = new javax.swing.JLabel();
+        cellLabel07 = new javax.swing.JLabel();
+        cellLabel08 = new javax.swing.JLabel();
+        cellLabel09 = new javax.swing.JLabel();
+        cellLabel18 = new javax.swing.JLabel();
+        cellLabel19 = new javax.swing.JLabel();
+        cellLabel10 = new javax.swing.JLabel();
+        cellLabel11 = new javax.swing.JLabel();
+        cellLabel12 = new javax.swing.JLabel();
+        cellLabel13 = new javax.swing.JLabel();
+        cellLabel14 = new javax.swing.JLabel();
+        cellLabel15 = new javax.swing.JLabel();
+        cellLabel16 = new javax.swing.JLabel();
+        cellLabel17 = new javax.swing.JLabel();
+        cellLabel35 = new javax.swing.JLabel();
+        cellLabel36 = new javax.swing.JLabel();
+        cellLabel28 = new javax.swing.JLabel();
+        cellLabel37 = new javax.swing.JLabel();
+        cellLabel29 = new javax.swing.JLabel();
+        cellLabel38 = new javax.swing.JLabel();
+        cellLabel20 = new javax.swing.JLabel();
+        cellLabel39 = new javax.swing.JLabel();
+        cellLabel21 = new javax.swing.JLabel();
+        cellLabel30 = new javax.swing.JLabel();
+        cellLabel22 = new javax.swing.JLabel();
+        cellLabel31 = new javax.swing.JLabel();
+        cellLabel23 = new javax.swing.JLabel();
+        cellLabel32 = new javax.swing.JLabel();
+        cellLabel24 = new javax.swing.JLabel();
+        cellLabel33 = new javax.swing.JLabel();
+        cellLabel25 = new javax.swing.JLabel();
+        cellLabel34 = new javax.swing.JLabel();
+        cellLabel26 = new javax.swing.JLabel();
+        cellLabel27 = new javax.swing.JLabel();
+        cellLabel79 = new javax.swing.JLabel();
+        cellLabel61 = new javax.swing.JLabel();
+        cellLabel70 = new javax.swing.JLabel();
+        cellLabel62 = new javax.swing.JLabel();
+        cellLabel71 = new javax.swing.JLabel();
+        cellLabel58 = new javax.swing.JLabel();
+        cellLabel63 = new javax.swing.JLabel();
+        cellLabel40 = new javax.swing.JLabel();
+        cellLabel59 = new javax.swing.JLabel();
+        cellLabel72 = new javax.swing.JLabel();
+        cellLabel41 = new javax.swing.JLabel();
+        cellLabel50 = new javax.swing.JLabel();
+        cellLabel64 = new javax.swing.JLabel();
+        cellLabel42 = new javax.swing.JLabel();
+        cellLabel51 = new javax.swing.JLabel();
+        cellLabel73 = new javax.swing.JLabel();
+        cellLabel43 = new javax.swing.JLabel();
+        cellLabel52 = new javax.swing.JLabel();
+        cellLabel65 = new javax.swing.JLabel();
+        cellLabel44 = new javax.swing.JLabel();
+        cellLabel53 = new javax.swing.JLabel();
+        cellLabel45 = new javax.swing.JLabel();
+        cellLabel54 = new javax.swing.JLabel();
+        cellLabel46 = new javax.swing.JLabel();
+        cellLabel47 = new javax.swing.JLabel();
+        cellLabel74 = new javax.swing.JLabel();
+        cellLabel66 = new javax.swing.JLabel();
+        cellLabel55 = new javax.swing.JLabel();
+        cellLabel67 = new javax.swing.JLabel();
+        cellLabel56 = new javax.swing.JLabel();
+        cellLabel48 = new javax.swing.JLabel();
+        cellLabel57 = new javax.swing.JLabel();
+        cellLabel49 = new javax.swing.JLabel();
+        cellLabel75 = new javax.swing.JLabel();
+        cellLabel76 = new javax.swing.JLabel();
+        cellLabel68 = new javax.swing.JLabel();
+        cellLabel77 = new javax.swing.JLabel();
+        cellLabel69 = new javax.swing.JLabel();
+        cellLabel78 = new javax.swing.JLabel();
+        cellLabel60 = new javax.swing.JLabel();
+        cellLabel87 = new javax.swing.JLabel();
+        cellLabel95 = new javax.swing.JLabel();
+        cellLabel96 = new javax.swing.JLabel();
+        cellLabel88 = new javax.swing.JLabel();
+        cellLabel97 = new javax.swing.JLabel();
+        cellLabel99 = new javax.swing.JLabel();
+        cellLabel81 = new javax.swing.JLabel();
+        cellLabel90 = new javax.swing.JLabel();
+        cellLabel82 = new javax.swing.JLabel();
+        cellLabel91 = new javax.swing.JLabel();
+        cellLabel89 = new javax.swing.JLabel();
+        cellLabel98 = new javax.swing.JLabel();
+        cellLabel83 = new javax.swing.JLabel();
+        cellLabel80 = new javax.swing.JLabel();
+        cellLabel92 = new javax.swing.JLabel();
+        cellLabel84 = new javax.swing.JLabel();
+        cellLabel93 = new javax.swing.JLabel();
+        cellLabel85 = new javax.swing.JLabel();
+        cellLabel94 = new javax.swing.JLabel();
+        cellLabel86 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("0,0");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel1.setOpaque(true);
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("0,1");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel2.setOpaque(true);
-
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("0,2");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel3.setOpaque(true);
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("0,3");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel4.setOpaque(true);
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("0,4");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel5.setOpaque(true);
-
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("0,5");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel6.setOpaque(true);
-
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("0,6");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel7.setOpaque(true);
-
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("0,7");
-        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel8.setOpaque(true);
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("0,8");
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel9.setOpaque(true);
-
-        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("0,9");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel10.setOpaque(true);
-
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("1,8");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel11.setOpaque(true);
-
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("1,9");
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel12.setOpaque(true);
-
-        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("1,0");
-        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel13.setOpaque(true);
-
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("1,1");
-        jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel14.setOpaque(true);
-
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("1,2");
-        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel15.setOpaque(true);
-
-        jLabel16.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("1,3");
-        jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel16.setOpaque(true);
-
-        jLabel17.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("1,4");
-        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel17.setOpaque(true);
-
-        jLabel18.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("1,5");
-        jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel18.setOpaque(true);
-
-        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("1,6");
-        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel19.setOpaque(true);
-
-        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("1,7");
-        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel20.setOpaque(true);
-
-        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("3,5");
-        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel21.setOpaque(true);
-
-        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("3,6");
-        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel22.setOpaque(true);
-
-        jLabel23.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("2,8");
-        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel23.setOpaque(true);
-
-        jLabel24.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("3,7");
-        jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel24.setOpaque(true);
-
-        jLabel25.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("2,9");
-        jLabel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel25.setOpaque(true);
-
-        jLabel26.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("3,8");
-        jLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel26.setOpaque(true);
-
-        jLabel27.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("2,0");
-        jLabel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel27.setOpaque(true);
-
-        jLabel28.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("3,9");
-        jLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel28.setOpaque(true);
-
-        jLabel29.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("2,1");
-        jLabel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel29.setOpaque(true);
-
-        jLabel30.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("3,0");
-        jLabel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel30.setOpaque(true);
-
-        jLabel31.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("2,2");
-        jLabel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel31.setOpaque(true);
-
-        jLabel32.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("3,1");
-        jLabel32.setToolTipText("");
-        jLabel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel32.setOpaque(true);
-
-        jLabel33.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("2,3");
-        jLabel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel33.setOpaque(true);
-
-        jLabel34.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("3,2");
-        jLabel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel34.setOpaque(true);
-
-        jLabel35.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("2,4");
-        jLabel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel35.setOpaque(true);
-
-        jLabel36.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("3,3");
-        jLabel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel36.setOpaque(true);
-
-        jLabel37.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel37.setText("2,5");
-        jLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel37.setOpaque(true);
-
-        jLabel38.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("3,4");
-        jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel38.setOpaque(true);
-
-        jLabel39.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("2,6");
-        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel39.setOpaque(true);
-
-        jLabel40.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("2,7");
-        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel40.setOpaque(true);
-
-        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("0,9");
-        jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel41.setOpaque(true);
-
-        jLabel42.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("6,1");
-        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel42.setOpaque(true);
-
-        jLabel43.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("7,0");
-        jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel43.setOpaque(true);
-
-        jLabel44.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("6,2");
-        jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel44.setOpaque(true);
-
-        jLabel45.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("7,1");
-        jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel45.setOpaque(true);
-
-        jLabel46.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("0,8");
-        jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel46.setOpaque(true);
-
-        jLabel47.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel47.setText("0,3");
-        jLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel47.setOpaque(true);
-
-        jLabel48.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("4,0");
-        jLabel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel48.setOpaque(true);
-
-        jLabel49.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("0,9");
-        jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel49.setOpaque(true);
-
-        jLabel50.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("7,2");
-        jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel50.setOpaque(true);
-
-        jLabel51.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("4,1");
-        jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel51.setOpaque(true);
-
-        jLabel52.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel52.setText("5,0");
-        jLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel52.setOpaque(true);
-
-        jLabel53.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("0,4");
-        jLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel53.setOpaque(true);
-
-        jLabel54.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel54.setText("4,2");
-        jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel54.setOpaque(true);
-
-        jLabel55.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel55.setText("5,1");
-        jLabel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel55.setOpaque(true);
-
-        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel56.setText("0,3");
-        jLabel56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel56.setOpaque(true);
-
-        jLabel57.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setText("4,3");
-        jLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel57.setOpaque(true);
-
-        jLabel58.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setText("5,2");
-        jLabel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel58.setOpaque(true);
-
-        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel59.setText("0,5");
-        jLabel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel59.setOpaque(true);
-
-        jLabel60.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel60.setText("0,4");
-        jLabel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel60.setOpaque(true);
-
-        jLabel61.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel61.setText("0,3");
-        jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel61.setOpaque(true);
-
-        jLabel62.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel62.setText("0,5");
-        jLabel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel62.setOpaque(true);
-
-        jLabel63.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel63.setText("0,4");
-        jLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel63.setOpaque(true);
-
-        jLabel64.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel64.setText("0,6");
-        jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel64.setOpaque(true);
-
-        jLabel65.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel65.setText("0,7");
-        jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel65.setOpaque(true);
-
-        jLabel66.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel66.setText("0,4");
-        jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel66.setOpaque(true);
-
-        jLabel67.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel67.setText("0,6");
-        jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel67.setOpaque(true);
-
-        jLabel68.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel68.setText("0,5");
-        jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel68.setOpaque(true);
-
-        jLabel69.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel69.setText("0,7");
-        jLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel69.setOpaque(true);
-
-        jLabel70.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel70.setText("0,6");
-        jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel70.setOpaque(true);
-
-        jLabel71.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel71.setText("0,8");
-        jLabel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel71.setOpaque(true);
-
-        jLabel72.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel72.setText("0,7");
-        jLabel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel72.setOpaque(true);
-
-        jLabel73.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel73.setText("0,9");
-        jLabel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel73.setOpaque(true);
-
-        jLabel74.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel74.setText("0,5");
-        jLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel74.setOpaque(true);
-
-        jLabel75.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("0,6");
-        jLabel75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel75.setOpaque(true);
-
-        jLabel76.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("0,8");
-        jLabel76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel76.setOpaque(true);
-
-        jLabel77.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("0,7");
-        jLabel77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel77.setOpaque(true);
-
-        jLabel78.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel78.setText("0,9");
-        jLabel78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel78.setOpaque(true);
-
-        jLabel79.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel79.setText("0,8");
-        jLabel79.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel79.setOpaque(true);
-
-        jLabel80.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel80.setText("6,0");
-        jLabel80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel80.setOpaque(true);
-
-        jLabel81.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel81.setText("0,7");
-        jLabel81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel81.setOpaque(true);
-
-        jLabel82.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel82.setText("0,5");
-        jLabel82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel82.setOpaque(true);
-
-        jLabel83.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel83.setText("0,6");
-        jLabel83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel83.setOpaque(true);
-
-        jLabel84.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel84.setText("0,8");
-        jLabel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel84.setOpaque(true);
-
-        jLabel85.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel85.setText("0,7");
-        jLabel85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel85.setOpaque(true);
-
-        jLabel86.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel86.setText("9,9");
-        jLabel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel86.setOpaque(true);
-
-        jLabel87.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel87.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel87.setText("8,1");
-        jLabel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel87.setOpaque(true);
-
-        jLabel88.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel88.setText("9,0");
-        jLabel88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel88.setOpaque(true);
-
-        jLabel89.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel89.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel89.setText("8,2");
-        jLabel89.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel89.setOpaque(true);
-
-        jLabel90.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel90.setText("9,1");
-        jLabel90.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel90.setOpaque(true);
-
-        jLabel91.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel91.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel91.setText("0,9");
-        jLabel91.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel91.setOpaque(true);
-
-        jLabel92.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel92.setText("0,8");
-        jLabel92.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel92.setOpaque(true);
-
-        jLabel93.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel93.setText("0,3");
-        jLabel93.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel93.setOpaque(true);
-
-        jLabel94.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel94.setText("8,0");
-        jLabel94.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel94.setOpaque(true);
-
-        jLabel95.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel95.setText("9,2");
-        jLabel95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel95.setOpaque(true);
-
-        jLabel96.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel96.setText("0,4");
-        jLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel96.setOpaque(true);
-
-        jLabel97.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel97.setText("0,3");
-        jLabel97.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel97.setOpaque(true);
-
-        jLabel98.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel98.setText("0,5");
-        jLabel98.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel98.setOpaque(true);
-
-        jLabel99.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel99.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel99.setText("0,4");
-        jLabel99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel99.setOpaque(true);
-
-        jLabel100.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel100.setText("0,6");
-        jLabel100.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel100.setOpaque(true);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
+
+        cellLabel00.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel00.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel00.setText("0,0");
+        cellLabel00.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel00.setOpaque(true);
+
+        cellLabel01.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel01.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel01.setText("0,1");
+        cellLabel01.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel01.setOpaque(true);
+
+        cellLabel02.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel02.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel02.setText("0,2");
+        cellLabel02.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel02.setOpaque(true);
+
+        cellLabel03.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel03.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel03.setText("0,3");
+        cellLabel03.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel03.setOpaque(true);
+
+        cellLabel04.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel04.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel04.setText("0,4");
+        cellLabel04.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel04.setOpaque(true);
+
+        cellLabel05.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel05.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel05.setText("0,5");
+        cellLabel05.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel05.setOpaque(true);
+
+        cellLabel06.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel06.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel06.setText("0,6");
+        cellLabel06.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel06.setOpaque(true);
+
+        cellLabel07.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel07.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel07.setText("0,7");
+        cellLabel07.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel07.setOpaque(true);
+
+        cellLabel08.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel08.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel08.setText("0,8");
+        cellLabel08.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel08.setOpaque(true);
+
+        cellLabel09.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel09.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel09.setText("0,9");
+        cellLabel09.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel09.setOpaque(true);
+
+        cellLabel18.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel18.setText("1,8");
+        cellLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel18.setOpaque(true);
+
+        cellLabel19.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel19.setText("1,9");
+        cellLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel19.setOpaque(true);
+
+        cellLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel10.setText("1,0");
+        cellLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel10.setOpaque(true);
+
+        cellLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel11.setText("1,1");
+        cellLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel11.setOpaque(true);
+
+        cellLabel12.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel12.setText("1,2");
+        cellLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel12.setOpaque(true);
+
+        cellLabel13.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel13.setText("1,3");
+        cellLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel13.setOpaque(true);
+
+        cellLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel14.setText("1,4");
+        cellLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel14.setOpaque(true);
+
+        cellLabel15.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel15.setText("1,5");
+        cellLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel15.setOpaque(true);
+
+        cellLabel16.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel16.setText("1,6");
+        cellLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel16.setOpaque(true);
+
+        cellLabel17.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel17.setText("1,7");
+        cellLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel17.setOpaque(true);
+
+        cellLabel35.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel35.setText("3,5");
+        cellLabel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel35.setOpaque(true);
+
+        cellLabel36.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel36.setText("3,6");
+        cellLabel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel36.setOpaque(true);
+
+        cellLabel28.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel28.setText("2,8");
+        cellLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel28.setOpaque(true);
+
+        cellLabel37.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel37.setText("3,7");
+        cellLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel37.setOpaque(true);
+
+        cellLabel29.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel29.setText("2,9");
+        cellLabel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel29.setOpaque(true);
+
+        cellLabel38.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel38.setText("3,8");
+        cellLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel38.setOpaque(true);
+
+        cellLabel20.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel20.setText("2,0");
+        cellLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel20.setOpaque(true);
+
+        cellLabel39.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel39.setText("3,9");
+        cellLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel39.setOpaque(true);
+
+        cellLabel21.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel21.setText("2,1");
+        cellLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel21.setOpaque(true);
+
+        cellLabel30.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel30.setText("3,0");
+        cellLabel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel30.setOpaque(true);
+
+        cellLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel22.setText("2,2");
+        cellLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel22.setOpaque(true);
+
+        cellLabel31.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel31.setText("3,1");
+        cellLabel31.setToolTipText("");
+        cellLabel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel31.setOpaque(true);
+
+        cellLabel23.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel23.setText("2,3");
+        cellLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel23.setOpaque(true);
+
+        cellLabel32.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel32.setText("3,2");
+        cellLabel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel32.setOpaque(true);
+
+        cellLabel24.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel24.setText("2,4");
+        cellLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel24.setOpaque(true);
+
+        cellLabel33.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel33.setText("3,3");
+        cellLabel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel33.setOpaque(true);
+
+        cellLabel25.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel25.setText("2,5");
+        cellLabel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel25.setOpaque(true);
+
+        cellLabel34.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel34.setText("3,4");
+        cellLabel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel34.setOpaque(true);
+
+        cellLabel26.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel26.setText("2,6");
+        cellLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel26.setOpaque(true);
+
+        cellLabel27.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel27.setText("2,7");
+        cellLabel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel27.setOpaque(true);
+
+        cellLabel79.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel79.setText("7,9");
+        cellLabel79.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel79.setOpaque(true);
+
+        cellLabel61.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel61.setText("6,1");
+        cellLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel61.setOpaque(true);
+
+        cellLabel70.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel70.setText("7,0");
+        cellLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel70.setOpaque(true);
+
+        cellLabel62.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel62.setText("6,2");
+        cellLabel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel62.setOpaque(true);
+
+        cellLabel71.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel71.setText("7,1");
+        cellLabel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel71.setOpaque(true);
+
+        cellLabel58.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel58.setText("5,8");
+        cellLabel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel58.setOpaque(true);
+
+        cellLabel63.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel63.setText("6,3");
+        cellLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel63.setOpaque(true);
+
+        cellLabel40.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel40.setText("4,0");
+        cellLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel40.setOpaque(true);
+
+        cellLabel59.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel59.setText("5,9");
+        cellLabel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel59.setOpaque(true);
+
+        cellLabel72.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel72.setText("7,2");
+        cellLabel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel72.setOpaque(true);
+
+        cellLabel41.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel41.setText("4,1");
+        cellLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel41.setOpaque(true);
+
+        cellLabel50.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel50.setText("5,0");
+        cellLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel50.setOpaque(true);
+
+        cellLabel64.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel64.setText("6,4");
+        cellLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel64.setOpaque(true);
+
+        cellLabel42.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel42.setText("4,2");
+        cellLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel42.setOpaque(true);
+
+        cellLabel51.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel51.setText("5,1");
+        cellLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel51.setOpaque(true);
+
+        cellLabel73.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel73.setText("7,3");
+        cellLabel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel73.setOpaque(true);
+
+        cellLabel43.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel43.setText("4,3");
+        cellLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel43.setOpaque(true);
+
+        cellLabel52.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel52.setText("5,2");
+        cellLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel52.setOpaque(true);
+
+        cellLabel65.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel65.setText("6,5");
+        cellLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel65.setOpaque(true);
+
+        cellLabel44.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel44.setText("4,4");
+        cellLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel44.setOpaque(true);
+
+        cellLabel53.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel53.setText("5,3");
+        cellLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel53.setOpaque(true);
+
+        cellLabel45.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel45.setText("4,5");
+        cellLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel45.setOpaque(true);
+
+        cellLabel54.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel54.setText("5,4");
+        cellLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel54.setOpaque(true);
+
+        cellLabel46.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel46.setText("4,6");
+        cellLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel46.setOpaque(true);
+
+        cellLabel47.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel47.setText("4,7");
+        cellLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel47.setOpaque(true);
+
+        cellLabel74.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel74.setText("7,4");
+        cellLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel74.setOpaque(true);
+
+        cellLabel66.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel66.setText("6,6");
+        cellLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel66.setOpaque(true);
+
+        cellLabel55.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel55.setText("5,5");
+        cellLabel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel55.setOpaque(true);
+
+        cellLabel67.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel67.setText("6,7");
+        cellLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel67.setOpaque(true);
+
+        cellLabel56.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel56.setText("5,6");
+        cellLabel56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel56.setOpaque(true);
+
+        cellLabel48.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel48.setText("4,8");
+        cellLabel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel48.setOpaque(true);
+
+        cellLabel57.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel57.setText("5,7");
+        cellLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel57.setOpaque(true);
+
+        cellLabel49.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel49.setText("4,9");
+        cellLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel49.setOpaque(true);
+
+        cellLabel75.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel75.setText("7,5");
+        cellLabel75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel75.setOpaque(true);
+
+        cellLabel76.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel76.setText("7,6");
+        cellLabel76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel76.setOpaque(true);
+
+        cellLabel68.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel68.setText("6,8");
+        cellLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel68.setOpaque(true);
+
+        cellLabel77.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel77.setText("7,7");
+        cellLabel77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel77.setOpaque(true);
+
+        cellLabel69.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel69.setText("6,9");
+        cellLabel69.setToolTipText("");
+        cellLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel69.setOpaque(true);
+
+        cellLabel78.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel78.setText("7,8");
+        cellLabel78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel78.setOpaque(true);
+
+        cellLabel60.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel60.setText("6,0");
+        cellLabel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel60.setOpaque(true);
+
+        cellLabel87.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel87.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel87.setText("8,7");
+        cellLabel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel87.setOpaque(true);
+
+        cellLabel95.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel95.setText("9,5");
+        cellLabel95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel95.setOpaque(true);
+
+        cellLabel96.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel96.setText("9,6");
+        cellLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel96.setOpaque(true);
+
+        cellLabel88.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel88.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel88.setText("8,8");
+        cellLabel88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel88.setOpaque(true);
+
+        cellLabel97.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel97.setText("9,7");
+        cellLabel97.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel97.setOpaque(true);
+
+        cellLabel99.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel99.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel99.setText("9,9");
+        cellLabel99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel99.setOpaque(true);
+
+        cellLabel81.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel81.setText("8,1");
+        cellLabel81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel81.setOpaque(true);
+
+        cellLabel90.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel90.setText("9,0");
+        cellLabel90.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel90.setOpaque(true);
+
+        cellLabel82.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel82.setText("8,2");
+        cellLabel82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel82.setOpaque(true);
+
+        cellLabel91.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel91.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel91.setText("9,1");
+        cellLabel91.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel91.setOpaque(true);
+
+        cellLabel89.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel89.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel89.setText("8,9");
+        cellLabel89.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel89.setOpaque(true);
+
+        cellLabel98.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel98.setText("9,8");
+        cellLabel98.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel98.setOpaque(true);
+
+        cellLabel83.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel83.setText("8,3");
+        cellLabel83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel83.setOpaque(true);
+
+        cellLabel80.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel80.setText("8,0");
+        cellLabel80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel80.setOpaque(true);
+
+        cellLabel92.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel92.setText("9,2");
+        cellLabel92.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel92.setOpaque(true);
+
+        cellLabel84.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel84.setText("8,4");
+        cellLabel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel84.setOpaque(true);
+
+        cellLabel93.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel93.setText("9,3");
+        cellLabel93.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel93.setOpaque(true);
+
+        cellLabel85.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel85.setText("8,5");
+        cellLabel85.setAlignmentY(8.5F);
+        cellLabel85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel85.setOpaque(true);
+
+        cellLabel94.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel94.setText("9,4");
+        cellLabel94.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel94.setOpaque(true);
+
+        cellLabel86.setBackground(new java.awt.Color(255, 255, 255));
+        cellLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cellLabel86.setText("8,6");
+        cellLabel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cellLabel86.setOpaque(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -747,211 +779,211 @@ public class UserInterface extends javax.swing.JFrame
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel00, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel01, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel02, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel03, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel04, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel05, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel06, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel07, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel08, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cellLabel09, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cellLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cellLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cellLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cellLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cellLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cellLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cellLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cellLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cellLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cellLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(cellLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -959,129 +991,134 @@ public class UserInterface extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel00, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel01, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel02, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel03, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel04, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel05, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel06, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel07, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel08, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel09, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cellLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cellLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // This is also an auto generated method, in which we 
+        keyPress(evt);
+    }//GEN-LAST:event_formKeyPressed
 
     /**
      * @param args the command line arguments
@@ -1119,106 +1156,225 @@ public class UserInterface extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel cellLabel00;
+    private javax.swing.JLabel cellLabel01;
+    private javax.swing.JLabel cellLabel02;
+    private javax.swing.JLabel cellLabel03;
+    private javax.swing.JLabel cellLabel04;
+    private javax.swing.JLabel cellLabel05;
+    private javax.swing.JLabel cellLabel06;
+    private javax.swing.JLabel cellLabel07;
+    private javax.swing.JLabel cellLabel08;
+    private javax.swing.JLabel cellLabel09;
+    private javax.swing.JLabel cellLabel10;
+    private javax.swing.JLabel cellLabel11;
+    private javax.swing.JLabel cellLabel12;
+    private javax.swing.JLabel cellLabel13;
+    private javax.swing.JLabel cellLabel14;
+    private javax.swing.JLabel cellLabel15;
+    private javax.swing.JLabel cellLabel16;
+    private javax.swing.JLabel cellLabel17;
+    private javax.swing.JLabel cellLabel18;
+    private javax.swing.JLabel cellLabel19;
+    private javax.swing.JLabel cellLabel20;
+    private javax.swing.JLabel cellLabel21;
+    private javax.swing.JLabel cellLabel22;
+    private javax.swing.JLabel cellLabel23;
+    private javax.swing.JLabel cellLabel24;
+    private javax.swing.JLabel cellLabel25;
+    private javax.swing.JLabel cellLabel26;
+    private javax.swing.JLabel cellLabel27;
+    private javax.swing.JLabel cellLabel28;
+    private javax.swing.JLabel cellLabel29;
+    private javax.swing.JLabel cellLabel30;
+    private javax.swing.JLabel cellLabel31;
+    private javax.swing.JLabel cellLabel32;
+    private javax.swing.JLabel cellLabel33;
+    private javax.swing.JLabel cellLabel34;
+    private javax.swing.JLabel cellLabel35;
+    private javax.swing.JLabel cellLabel36;
+    private javax.swing.JLabel cellLabel37;
+    private javax.swing.JLabel cellLabel38;
+    private javax.swing.JLabel cellLabel39;
+    private javax.swing.JLabel cellLabel40;
+    private javax.swing.JLabel cellLabel41;
+    private javax.swing.JLabel cellLabel42;
+    private javax.swing.JLabel cellLabel43;
+    private javax.swing.JLabel cellLabel44;
+    private javax.swing.JLabel cellLabel45;
+    private javax.swing.JLabel cellLabel46;
+    private javax.swing.JLabel cellLabel47;
+    private javax.swing.JLabel cellLabel48;
+    private javax.swing.JLabel cellLabel49;
+    private javax.swing.JLabel cellLabel50;
+    private javax.swing.JLabel cellLabel51;
+    private javax.swing.JLabel cellLabel52;
+    private javax.swing.JLabel cellLabel53;
+    private javax.swing.JLabel cellLabel54;
+    private javax.swing.JLabel cellLabel55;
+    private javax.swing.JLabel cellLabel56;
+    private javax.swing.JLabel cellLabel57;
+    private javax.swing.JLabel cellLabel58;
+    private javax.swing.JLabel cellLabel59;
+    private javax.swing.JLabel cellLabel60;
+    private javax.swing.JLabel cellLabel61;
+    private javax.swing.JLabel cellLabel62;
+    private javax.swing.JLabel cellLabel63;
+    private javax.swing.JLabel cellLabel64;
+    private javax.swing.JLabel cellLabel65;
+    private javax.swing.JLabel cellLabel66;
+    private javax.swing.JLabel cellLabel67;
+    private javax.swing.JLabel cellLabel68;
+    private javax.swing.JLabel cellLabel69;
+    private javax.swing.JLabel cellLabel70;
+    private javax.swing.JLabel cellLabel71;
+    private javax.swing.JLabel cellLabel72;
+    private javax.swing.JLabel cellLabel73;
+    private javax.swing.JLabel cellLabel74;
+    private javax.swing.JLabel cellLabel75;
+    private javax.swing.JLabel cellLabel76;
+    private javax.swing.JLabel cellLabel77;
+    private javax.swing.JLabel cellLabel78;
+    private javax.swing.JLabel cellLabel79;
+    private javax.swing.JLabel cellLabel80;
+    private javax.swing.JLabel cellLabel81;
+    private javax.swing.JLabel cellLabel82;
+    private javax.swing.JLabel cellLabel83;
+    private javax.swing.JLabel cellLabel84;
+    private javax.swing.JLabel cellLabel85;
+    private javax.swing.JLabel cellLabel86;
+    private javax.swing.JLabel cellLabel87;
+    private javax.swing.JLabel cellLabel88;
+    private javax.swing.JLabel cellLabel89;
+    private javax.swing.JLabel cellLabel90;
+    private javax.swing.JLabel cellLabel91;
+    private javax.swing.JLabel cellLabel92;
+    private javax.swing.JLabel cellLabel93;
+    private javax.swing.JLabel cellLabel94;
+    private javax.swing.JLabel cellLabel95;
+    private javax.swing.JLabel cellLabel96;
+    private javax.swing.JLabel cellLabel97;
+    private javax.swing.JLabel cellLabel98;
+    private javax.swing.JLabel cellLabel99;
     // End of variables declaration//GEN-END:variables
+
+    final int ROWS    = 10;
+    final int COLUMNS = 10;
+    
+    JLabel[][] matrix = new JLabel[ROWS][COLUMNS];
+    
+    int currentRow    = ROWS    / 2;
+    int currentColumn = COLUMNS / 2;
+    
+    int previousRow    = currentRow;
+    int previousColumn = currentColumn;
+    
+        
+    
+    private void setUp() {
+        JLabel[] row0 = {
+            cellLabel00,cellLabel01,cellLabel02,cellLabel03,cellLabel04,
+            cellLabel05,cellLabel06,cellLabel07,cellLabel08,cellLabel09
+        };
+        JLabel[] row1 = {
+            cellLabel10,cellLabel11,cellLabel12,cellLabel13,cellLabel14,
+            cellLabel15,cellLabel16,cellLabel17,cellLabel18,cellLabel19
+        };
+        JLabel[] row2 = {
+            cellLabel20,cellLabel21,cellLabel22,cellLabel23,cellLabel24,
+            cellLabel25,cellLabel26,cellLabel27,cellLabel28,cellLabel29
+        };
+        JLabel[] row3 = {
+            cellLabel30,cellLabel31,cellLabel32,cellLabel33,cellLabel34,
+            cellLabel35,cellLabel36,cellLabel37,cellLabel38,cellLabel39
+        };
+        JLabel[] row4 = {
+            cellLabel40,cellLabel41,cellLabel42,cellLabel43,cellLabel44,
+            cellLabel45,cellLabel46,cellLabel47,cellLabel48,cellLabel49
+        };
+        JLabel[] row5 = {
+            cellLabel50,cellLabel51,cellLabel52,cellLabel53,cellLabel54,
+            cellLabel55,cellLabel56,cellLabel57,cellLabel58,cellLabel59
+        };
+        JLabel[] row6 = {
+            cellLabel60,cellLabel61,cellLabel62,cellLabel63,cellLabel64,
+            cellLabel65,cellLabel66,cellLabel67,cellLabel68,cellLabel69
+        };
+        JLabel[] row7 = {
+            cellLabel70,cellLabel71,cellLabel72,cellLabel73,cellLabel74,
+            cellLabel75,cellLabel76,cellLabel77,cellLabel78,cellLabel79
+        };
+        JLabel[] row8 = {
+            cellLabel80,cellLabel81,cellLabel82,cellLabel83,cellLabel84,
+            cellLabel85,cellLabel86,cellLabel87,cellLabel88,cellLabel89
+        };
+        JLabel[] row9 = {
+            cellLabel90,cellLabel91,cellLabel92,cellLabel93,cellLabel94,
+            cellLabel95,cellLabel96,cellLabel97,cellLabel98,cellLabel99
+        };
+        matrix[0] = row0;
+        matrix[1] = row1;
+        matrix[2] = row2;
+        matrix[3] = row3;
+        matrix[4] = row4;
+        matrix[5] = row5;
+        matrix[6] = row6;
+        matrix[7] = row7;
+        matrix[8] = row8;
+        matrix[9] = row9;       
+        
+        for (int row = 0; row < ROWS; row++) {
+            for (int column = 0; column < COLUMNS; column++) {
+                matrix[row][column].setOpaque(true);
+                matrix[row][column].setBackground(Color.white);
+                matrix[row][column].setForeground(Color.black);                
+            }
+        }
+        
+        matrix[currentRow][currentColumn].setBackground(Color.black);
+        matrix[currentRow][currentColumn].setForeground(Color.white);        
+        matrix[currentRow][currentColumn].setText("HERO");
+    }
+    
+    
+    private void keyPress(KeyEvent event) {
+        previousRow    = currentRow;
+        previousColumn = currentColumn; 
+        if      (event.getKeyCode() == KeyEvent.VK_UP)    currentRow--;
+        else if (event.getKeyCode() == KeyEvent.VK_DOWN)  currentRow++;
+        else if (event.getKeyCode() == KeyEvent.VK_LEFT)  currentColumn--;
+        else if (event.getKeyCode() == KeyEvent.VK_RIGHT) currentColumn++;
+        if (isInBounds()) {
+            matrix[currentRow][currentColumn].setText("HERO");
+            matrix[currentRow][currentColumn].setBackground(Color.black);
+            matrix[currentRow][currentColumn].setForeground(Color.white);
+            
+            matrix[previousRow][previousColumn].setBackground(Color.white);
+            matrix[previousRow][previousColumn].setForeground(Color.black);
+            
+            matrix[previousRow][previousColumn].setText(previousRow + 
+                    "," + previousColumn);
+        }
+    }
+
+    private boolean isInBounds() {
+        if (currentRow < 0) {
+            currentRow = 0;
+            return false;
+        }
+        if (currentColumn < 0) {
+            currentColumn = 0;
+            return false;
+        }
+        if (currentRow >= ROWS) {
+            currentRow = ROWS - 1;
+            return false;
+        }
+        if (currentColumn >= COLUMNS) {
+            currentColumn = COLUMNS - 1;
+            return false; 
+        }
+        return true;
+    }
 
 }

@@ -4,7 +4,7 @@ package movement2;
 
 
 /**
- * NewMain.java - This is the "level 2" gaming example which uses the 
+ * NewMain.java - This is the "level 2" gaming movement example which uses the 
  * NetBeans designer to help with building a layout quicker. This also uses 
  * other classes to help manage the logic. It uses a "main" class with a main
  * method to then launch the designer JFrame class. This is so that any other 

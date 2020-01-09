@@ -32,7 +32,8 @@ public class GameExampleCS30S
         final String[] CHOICES = { 
             "Level 1 Movement Example",
             "Level 2 Movement Example",
-            "Level 3 Movement Example"
+            "Level 3 Movement Example",
+            "Level 1 Grid Example"            
         };
         String choice = Dialogs.choices(TEXT, CHOICES);
         if (choice.equals(CHOICES[0])) {
@@ -43,6 +44,9 @@ public class GameExampleCS30S
         }
         else if (choice.equals(CHOICES[2])) {
             new movement3.MainClass().main(args);
+        }
+        else if (choice.equals(CHOICES[3])) {
+            new grid1.UserInterface().main(args);
         }
     }
 

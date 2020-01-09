@@ -10,11 +10,11 @@ import javax.swing.JOptionPane;
 
 
 /**
- * UserInterface.java - This is the "level 1" gaming example which uses the 
- * NetBeans designer to help with building a layout quicker and without much
- * coding. It also keeps all the code in this class and doesn't use any other 
- * classes. This has some advantages, but does make for longer and less 
- * flexible code. I try to keep the code simple, it reduces the things 
+ * UserInterface.java - This is the "level 1" gaming movement example which 
+ * uses the NetBeans designer to help with building a layout quicker and 
+ * without much coding. It also keeps all the code in this class and doesn't 
+ * use any other classes. This has some advantages, but does make for longer 
+ * and less flexible code. I try to keep the code simple, it reduces the things 
  * this project can do, but keeps the complexity (and the math) a lot 
  * simpler. 
  * 
