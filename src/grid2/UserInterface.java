@@ -2,31 +2,35 @@
 /** required package class namespace */
 package grid2;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import static javax.swing.SwingConstants.CENTER;
-
 
 /**
- * UserInterface.java - description
+ * UserInterface.java - This is the "level 2" gaming grid example which 
+ * uses the NetBeans designer to help with building a layout but then transfers
+ * a lot of the logic to another class (the GameEngine class) along with 
+ * references to some of the objects on this design so it can "update" the
+ * design from the other class.
  *
  * @author Mr. Wachs
- * @since Jan. 9, 2020, 12:56:39 p.m.
+ * @since Jan. 9, 2020, 8:17:09 a.m.
  */
 public class UserInterface extends javax.swing.JFrame 
 {
 
+    // the class which contains the logic for the design 
+    private GameEngine engine;
+    
     /** 
      * Default constructor, creates new form UserInterface 
      */
     public UserInterface() {
         initComponents();
-        initObjects();
-        setVisible(true);
+        // the engine is instantiate and then all logic proceeds in that class
+        // I pass references to the JPanel where the grid of labels will be 
+        // created inside of and the user interface itself. If I added other
+        // objects to the design (e.g. a label) then I would pass a reference
+        // to the other class through the parameter to the constructor method
+        // so the other class could modify them as well
+        engine = new GameEngine(jPanel1,this);
     }
 
     /** This method is called from within the constructor to
@@ -54,151 +58,5 @@ public class UserInterface extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-
     
-    
-    private JLabel[][] matrix;
-    
-    private int column1, column2, row1, row2, clickCount = 1;
-    
-    
-    private void initObjects() {
-        int width  = jPanel1.getWidth();
-        int height = jPanel1.getHeight();
-        
-        int frameWidth  = width  + 40;
-        int frameHeight = height + 60;
-        
-        setSize(frameWidth, frameHeight);
-        setResizable(false);
-        setLocationRelativeTo(null);
-        
-        final int WIDTH  = 20;
-        final int HEIGHT = WIDTH;
-        
-        int rows   = height / HEIGHT;
-        int colums = width  / WIDTH;
-        
-        matrix = new JLabel[rows][colums];
-                
-        int y = 0;
-        for (int row = 0; row < matrix.length; row++) {
-            int x = 0;
-            for (int column = 0; column < matrix[row].length; column++) {
-                createLabel(matrix, row, column, x, y, WIDTH, HEIGHT);
-                x += WIDTH;
-            }
-            y += HEIGHT;
-        }
-           
-    }
-
-    private void createLabel(JLabel[][] matrix, int row, int column, 
-            int x, int y, int width, int height) {
-        matrix[row][column] = new JLabel();
-        setLook(row, column);
-        setAction(row, column);
-        jPanel1.add(matrix[row][column]);
-        matrix[row][column].setBounds(x, y, width, height);
-    }
-
-    private void setLook(int row, int column) {
-        matrix[row][column].setFont(new Font("Arial Narrow",Font.PLAIN,7));
-        matrix[row][column].setHorizontalAlignment(CENTER);
-        matrix[row][column].setText(row + "," + column);
-        matrix[row][column].setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        matrix[row][column].setOpaque(true);
-        matrix[row][column].setBackground(Color.white);
-        matrix[row][column].setForeground(Color.lightGray);
-    }
-    
-    private void setAction(int row, int column) {
-        matrix[row][column].addMouseListener(new MouseListener() {
-            public void mouseClicked(MouseEvent e) {
-                mouseClick(row,column);
-            }
-            public void mousePressed(MouseEvent e) { }
-            public void mouseReleased(MouseEvent e) { }
-            public void mouseEntered(MouseEvent e) { }
-            public void mouseExited(MouseEvent e) { }
-        });
-    }
-
-    private void mouseClick(int row, int column) {
-        if (clickCount == 1) {
-            matrix[row][column].setBackground(Color.red);
-            column1 = column;
-            row1 = row;
-            clickCount = 2;
-        }
-        else if (clickCount == 2) {
-            matrix[row][column].setBackground(Color.blue);
-            column2 = column;
-            row2 = row;
-            clickCount = 1;
-            drawLine();
-        }
-    }
-
-    private void drawLine() {    
-        int start = 0;
-        int end   = 0;
-        double x1 = (double)column1;
-        double x2 = (double)column2;
-        double y1 = (double)row1;
-        double y2 = (double)row2;
-        if (column1 == column2) {
-            if (row1 < row2) {
-                start = row1 + 1;
-                end   = row2;
-            }
-            else {
-                end    = row1;
-                start  = row2 + 1;
-            }
-            for (double y = start; y < end; y++) {
-                int row    = (int)y;
-                int column = (int)x1;
-                matrix[row][column].setBackground(Color.yellow);
-            }
-        }
-        else if (Math.abs(row1 - row2) < Math.abs(column1 - column2)) {  
-            if (column1 < column2) {
-                start = column1 + 1;
-                end   = column2;
-            }
-            else {
-                end    = column1;
-                start  = column2 + 1;
-            }
-            for (double x = start; x < end; x++) {                
-                double m = (y2 - y1) / (x2 - x1);
-                double b = y2 - (m * x2);
-                double y = m * x + b;
-                int row    = (int)y;
-                int column = (int)x;
-                matrix[row][column].setBackground(Color.yellow);
-            }
-        }        
-        else {
-            if (row1 < row2) {
-                start = row1 + 1;
-                end   = row2;
-            }
-            else {
-                end    = row1;
-                start  = row2 + 1;
-            }
-            for (double y = start; y < end; y++) {
-                double m = (y2 - y1) / (x2 - x1);
-                double b = y2 - (m * x2);
-                double x = (y - b) / m;
-                int row    = (int)y;
-                int column = (int)x;
-                matrix[row][column].setBackground(Color.yellow);
-            }
-        }
-    }
-    
-
 }
