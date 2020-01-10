@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /** required package class namespace */
 package grid2;
@@ -145,46 +140,64 @@ public class UserInterface extends javax.swing.JFrame
         }
     }
 
-    private void drawLine() {     
-//        System.out.println("x1,y1 = \t(" + column1 + "," + row1 + ")");
-
+    private void drawLine() {    
         int start = 0;
         int end   = 0;
-        int change = 1;
-
-        if (column1 < column2) {
-            start = (column1 + 1);
-            end   = column2;
-            change = 1;
+        double x1 = (double)column1;
+        double x2 = (double)column2;
+        double y1 = (double)row1;
+        double y2 = (double)row2;
+        if (column1 == column2) {
+            if (row1 < row2) {
+                start = row1 + 1;
+                end   = row2;
+            }
+            else {
+                end    = row1;
+                start  = row2 + 1;
+            }
+            for (double y = start; y < end; y++) {
+                int row    = (int)y;
+                int column = (int)x1;
+                matrix[row][column].setBackground(Color.yellow);
+            }
         }
-        else {
-            end    = (column1 + 1);
-            start  = column2;
-            change = -1;
-        }
-        for (double x = start; x < end; x+=change) {
-                double x1 = (double)column1;
-                double x2 = (double)column2;
-                double y1 = (double)row1;
-                double y2 = (double)row2;
+        else if (Math.abs(row1 - row2) < Math.abs(column1 - column2)) {  
+            if (column1 < column2) {
+                start = column1 + 1;
+                end   = column2;
+            }
+            else {
+                end    = column1;
+                start  = column2 + 1;
+            }
+            for (double x = start; x < end; x++) {                
                 double m = (y2 - y1) / (x2 - x1);
                 double b = y2 - (m * x2);
                 double y = m * x + b;
                 int row    = (int)y;
                 int column = (int)x;
                 matrix[row][column].setBackground(Color.yellow);
+            }
+        }        
+        else {
+            if (row1 < row2) {
+                start = row1 + 1;
+                end   = row2;
+            }
+            else {
+                end    = row1;
+                start  = row2 + 1;
+            }
+            for (double y = start; y < end; y++) {
+                double m = (y2 - y1) / (x2 - x1);
+                double b = y2 - (m * x2);
+                double x = (y - b) / m;
+                int row    = (int)y;
+                int column = (int)x;
+                matrix[row][column].setBackground(Color.yellow);
+            }
         }
-//        String text = "x , y = \t(" + x  + "," + y + ")";
-//                text += "\t m =  " + m  + " b  = " + b;
-//                text += "\t x1,y1 (" + column1 + "," + row1 + ")";
-//                text += "\t x2,y2 (" + column2 + "," + row2 + ")";
-//                text += "\t(y2 - y1) = "             + (row2 - row1);
-//                text += "\t(x2 - x1) = "             + (column2 - column1);
-//                text += "\t(y2 - y1) / (x2 - x1) = " + ((y2 - y1) / (x2 - x1));
-//                        
-//                System.out.println(text);
-        
-//        System.out.println("x2,y3 = \t(" + column2 + "," + row2 + ")");
     }
     
 
