@@ -19,7 +19,7 @@ public class SnakeUI extends javax.swing.JFrame
      */
     public SnakeUI() {
         initComponents();
-        engine = new GameEngine(jPanel1,jList1,jScrollPane1,this);
+        engine = new GameEngine(jPanel1,jList1,jScrollPane1,jLabel5,this);
     }
 
     /** This method is called from within the constructor to
@@ -43,6 +43,11 @@ public class SnakeUI extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 102));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -142,6 +147,10 @@ public class SnakeUI extends javax.swing.JFrame
     private void jList1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jList1KeyPressed
         engine.keyPress(evt);
     }//GEN-LAST:event_jList1KeyPressed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        engine.saveScores();
+    }//GEN-LAST:event_formWindowClosing
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

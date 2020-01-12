@@ -8,9 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import movement3.tools.Animation;
 import movement3.tools.Directions;
-import movement3.tools.FileHandler;
+import tools.FileHandler;
 import movement3.tools.GameCharacter;
-import movement3.tools.MediaPlayer;
+import tools.MediaPlayer;
 
 
 /**

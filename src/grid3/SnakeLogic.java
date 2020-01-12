@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.JLabel;
+import tools.Dialogs;
 import tools.Numbers;
 
 
@@ -30,28 +31,39 @@ public class SnakeLogic
     private int        maxColumns;
     private Timer      timer;
     private int        length;
+    private int        score;
     
     
     
     public SnakeLogic(JPanel panel, GameEngine engine) {
         this.engine = engine;
+        Dialogs.title = "Snake";
+        timer = new Timer(Globals.TIMER_DELAY, new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                action();
+            }
+        });
         setGrid(panel);
-        setTimer();
+        newGame();
     }
 
+    private void newGame() {
+        timer.stop();
+        setSnake();
+        newPowerUp();
+        redraw();
+        score = 0;
+        engine.scoreLabel.setText("Current Score: " + score);
+    }
+    
+    
     /**
      * When a key is pressed, move the snake head's direction
      * 
      * @param event this keys event
      */
     public void keyPress(KeyEvent event) {
-        System.out.println("Key");
-        if (timer.isRunning() == false) {
-            System.out.println("GO");
-            setSnake();
-            newPowerUp();
-            timer.start();            
-        }        
+        if (!timer.isRunning()) timer.start();      
         if      (event.getKeyCode() == KeyEvent.VK_UP)    
                                         snake[Globals.HEAD].direction = Globals.UP;
         else if (event.getKeyCode() == KeyEvent.VK_DOWN)  
@@ -76,32 +88,15 @@ public class SnakeLogic
             y += Globals.SQUARE_SIZE;
         } 
     }
-    
-    /** 
-     * Sets the game timer 
-     */
-    private void setTimer() {
-        timer = new Timer(Globals.TIMER_DELAY, new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                action();
-            }
-        });
-    }
 
     /** 
      * Ends the current game 
      */
     private void gameOver() {
         timer.stop();
-//        if (JOptionPane.showConfirmDialog(this, 
-//                "Game Over!\nDo you want to play again?",
-//                FORM_TITLE,JOptionPane.YES_NO_OPTION) == 
-//                JOptionPane.YES_OPTION) {
-//            startGame();
-//        }
-//        else { 
-//            close();
-//        }
+        String name = Dialogs.input("Game Over!\n\nEnter your name");
+        engine.add(score + " " + name);
+        newGame();
     }
     
     /**
@@ -202,6 +197,8 @@ public class SnakeLogic
             snake[Globals.HEAD].column == powerUp.column) {            
             growSnake();
             newPowerUp();
+            score++;
+            engine.scoreLabel.setText("Current Score: " + score);
             return true;
         }
         return false;

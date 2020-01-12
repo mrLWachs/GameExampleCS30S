@@ -6,8 +6,8 @@ package movement3.game;
 import java.awt.event.KeyEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import movement3.tools.FileHandler;
-import movement3.tools.MediaPlayer;
+import tools.FileHandler;
+import tools.MediaPlayer;
 
 
 

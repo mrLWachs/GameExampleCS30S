@@ -39,5 +39,7 @@ public class Globals
                             BorderFactory.createLineBorder(SQUARE_BORDER_COLOR);    
     public static final int    BLANK                 = -1;    
     public static final int    HEAD                  = 0;
+    public static final String PATH                  = "/grid3/";
+    public static final String DATA_FILE             = PATH + "data.txt";
     
 }

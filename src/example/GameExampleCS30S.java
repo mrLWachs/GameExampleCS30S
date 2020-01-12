@@ -33,7 +33,9 @@ public class GameExampleCS30S
             "Level 1 Movement Example",
             "Level 2 Movement Example",
             "Level 3 Movement Example",
-            "Level 1 Grid Example"            
+            "Level 1 Grid Example",
+            "Level 2 Grid Example",
+            "Level 3 Grid Example"          
         };
         String choice = Dialogs.choices(TEXT, CHOICES);
         if (choice.equals(CHOICES[0])) {
@@ -47,6 +49,12 @@ public class GameExampleCS30S
         }
         else if (choice.equals(CHOICES[3])) {
             new grid1.UserInterface().main(args);
+        }
+        else if (choice.equals(CHOICES[4])) {
+            new grid2.MainClass().main(args);
+        }
+        else if (choice.equals(CHOICES[5])) {
+            new grid3.MainClass().main(args);
         }
     }
 

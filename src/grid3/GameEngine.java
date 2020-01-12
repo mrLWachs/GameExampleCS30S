@@ -4,10 +4,13 @@ package grid3;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import javax.swing.DefaultListModel;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import tools.Dialogs;
+import tools.FileHandler;
 
  
 /**
@@ -22,19 +25,30 @@ public class GameEngine
     private JPanel panel;
     private JList<String> list;
     private JScrollPane scroll;
-    private SnakeUI snakeUI;
     
+    public JLabel scoreLabel;
+    public SnakeUI snakeUI;
+    
+    private DefaultListModel model;
     private SnakeLogic logic;
+    private FileHandler file;
 
     
     public GameEngine(JPanel panel, JList<String> list, 
-            JScrollPane scroll, SnakeUI snakeUI) {         
-        this.panel   = panel;
-        this.list    = list;
-        this.scroll  = scroll;
-        this.snakeUI = snakeUI;
+            JScrollPane scroll, JLabel scoreLabel, SnakeUI snakeUI) {         
+        this.panel      = panel;
+        this.list       = list;
+        this.scroll     = scroll;
+        this.scoreLabel = scoreLabel;
+        this.snakeUI    = snakeUI;
+        model           = new DefaultListModel();
+        file            = new FileHandler(Globals.DATA_FILE);
+        list.setModel(model);
+        list.setFocusable(false);
+        panel.requestFocus();
+        getScores();
         setFrame();
-        logic = new SnakeLogic(panel,this);
+        logic = new SnakeLogic(panel, this);
         snakeUI.setVisible(true);
     }
 
@@ -51,11 +65,42 @@ public class GameEngine
         logic.keyPress(event);
     }
 
-    public void mouseClicked(MouseEvent event) {
-        
+    public void mouseClicked(MouseEvent event) {        
         if (event.getClickCount() == 2) {
-            Dialogs.yesNo("Do you want to delete...");
+            int index = list.getSelectedIndex();
+            String text = list.getSelectedValue();
+            int start  = text.indexOf(" ") + 1;
+            text = text.substring(start);
+            if (Dialogs.yesNo("Are you sure you want to delete " + text)) {
+                model.remove(index);
+            }
         }
+    }
+
+    public void add(String score) {
+        model.addElement(score);
+        int length = list.getModel().getSize() - 1;
+        list.ensureIndexIsVisible(length);
+        list.clearSelection();
+    }
+
+    private void getScores() {        
+        String[] scores = file.read();
+        if (scores == null) return;
+        for (int i = 0; i < scores.length; i++) {
+            add(scores[i]);
+        }
+    }
+
+    public void saveScores() {
+        int length = list.getModel().getSize();
+        String[] scores = new String[length];
+        for (int i = 0; i < length; i++) {
+            list.setSelectedIndex(i);
+            String text = list.getSelectedValue();
+            scores[i] = text;
+        }        
+        file.write(scores);
     }
     
 }
