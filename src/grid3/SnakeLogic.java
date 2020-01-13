@@ -2,6 +2,7 @@
 /** required package class namespace */
 package grid3;
 
+/** required imports */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -11,10 +12,9 @@ import javax.swing.JLabel;
 import tools.Dialogs;
 import tools.Numbers;
 
-
  
 /**
- * SnakeLogic.java - description
+ * SnakeLogic.java - the logic engine for the snake game 
  *
  * @author Mr. Wachs
  * @since Jan. 10, 2020, 3:38:58 p.m.
@@ -22,41 +22,46 @@ import tools.Numbers;
 public class SnakeLogic 
 {
 
-    private GameEngine engine;
-    
-    private JLabel[][] grid;
-    private Location[] snake;
-    private Location   powerUp;
-    private int        maxRows;
-    private int        maxColumns;
-    private Timer      timer;
-    private int        length;
-    private int        score;
-    
-    
-    
-    public SnakeLogic(JPanel panel, GameEngine engine) {
-        this.engine = engine;
-        Dialogs.title = "Snake";
+    private UIEngine   engine;          // the logic engine for the UI
+    private JLabel[][] grid;            // a matrix of labels for the game
+    private Location[] snake;           // an array for all the snake parts
+    private Location   powerUp;         // location of the power up
+    private int        maxRows;         // the total number of rows and columns 
+    private int        maxColumns;      // able to be drawn in the panel
+    private Timer      timer;           // game timer
+    private int        length;          // length of the snake parts
+    private int        score;           // score of power ups eaten
+        
+    /**
+     * Constructor, sets class properties
+     * 
+     * @param panel the UI panel to draw the game inside of
+     * @param engine the user interface logic engine
+     */
+    public SnakeLogic(JPanel panel, UIEngine engine) {
+        this.engine = engine;           // connect parameter to property
+        Dialogs.title = Globals.TITLE;  // set dialog title
         timer = new Timer(Globals.TIMER_DELAY, new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                action();
+                action();               // timer action
             }
         });
-        setGrid(panel);
-        newGame();
+        setGrid(panel);                 // set up the panel for snake
+        newGame();                      // set up a new game
     }
 
+    /**
+     * Set the properties for a new game, but do not start the timer
+     */
     private void newGame() {
-        timer.stop();
-        setSnake();
-        newPowerUp();
-        redraw();
-        score = 0;
-        engine.scoreLabel.setText("Current Score: " + score);
+        timer.stop();               // stop timer if running
+        setSnake();                 // set up the snake 
+        newPowerUp();               // create new power up
+        redraw();                   // draw the screen
+        score = 0;                  // reset score
+        engine.scoreLabel.setText("Current Score: " + score);   // show score
     }
-    
-    
+        
     /**
      * When a key is pressed, move the snake head's direction
      * 
@@ -64,28 +69,33 @@ public class SnakeLogic
      */
     public void keyPress(KeyEvent event) {
         if (!timer.isRunning()) timer.start();      
-        if      (event.getKeyCode() == KeyEvent.VK_UP)    
-                                        snake[Globals.HEAD].direction = Globals.UP;
+        if (event.getKeyCode() == KeyEvent.VK_UP)    
+            snake[Globals.HEAD].direction = Globals.UP;
         else if (event.getKeyCode() == KeyEvent.VK_DOWN)  
-                                        snake[Globals.HEAD].direction = Globals.DOWN;
+            snake[Globals.HEAD].direction = Globals.DOWN;
         else if (event.getKeyCode() == KeyEvent.VK_LEFT)  
-                                        snake[Globals.HEAD].direction = Globals.LEFT;
+            snake[Globals.HEAD].direction = Globals.LEFT;
         else if (event.getKeyCode() == KeyEvent.VK_RIGHT) 
-                                        snake[Globals.HEAD].direction = Globals.RIGHT;
+            snake[Globals.HEAD].direction = Globals.RIGHT;
     }
 
+    /**
+     * Set up the grid for the game of snake in the UI panel area
+     * 
+     * @param panel the UI panel to draw the game inside of
+     */
     private void setGrid(JPanel panel) {
-        maxRows    = panel.getHeight() / Globals.SQUARE_SIZE;
-        maxColumns = panel.getWidth()  / Globals.SQUARE_SIZE;        
-        grid = new JLabel[maxRows][maxColumns];
+        maxRows    = panel.getHeight() / Globals.SQUARE_SIZE;   // calculate 
+        maxColumns = panel.getWidth()  / Globals.SQUARE_SIZE;   // sizes
+        grid = new JLabel[maxRows][maxColumns];                 // create matrix
         int y = (panel.getHeight() - (maxRows * Globals.SQUARE_SIZE)) / 2;
-        for (int row = 0; row < maxRows; row++) {
+        for (int row = 0; row < maxRows; row++) {               // traverse rows
             int x = (panel.getWidth() - (maxColumns * Globals.SQUARE_SIZE)) / 2;
-            for (int column = 0; column < maxColumns; column++) {
-                createSquare(x,y,row,column,panel);
-                x += Globals.SQUARE_SIZE;
+            for (int column = 0; column < maxColumns; column++) {   
+                createSquare(x,y,row,column,panel);             // create square
+                x += Globals.SQUARE_SIZE;                       // advance x
             }
-            y += Globals.SQUARE_SIZE;
+            y += Globals.SQUARE_SIZE;                           // advance y
         } 
     }
 
@@ -93,10 +103,10 @@ public class SnakeLogic
      * Ends the current game 
      */
     private void gameOver() {
-        timer.stop();
+        timer.stop();                       // stop the timer
         String name = Dialogs.input("Game Over!\n\nEnter your name");
-        engine.add(score + " " + name);
-        newGame();
+        engine.add(score + " " + name);     // add entered score to UI list
+        newGame();                          // set up a new game
     }
     
     /**
@@ -120,12 +130,12 @@ public class SnakeLogic
      * Sets up the snake at the start of the game 
      */
     private void setSnake() {
-        length = 1;
-        snake = new Location[maxRows*maxColumns];
-        for (int i = 0; i < snake.length; i++) {
+        length = 1;                                 // starting length
+        snake = new Location[maxRows*maxColumns];   // create array
+        for (int i = 0; i < snake.length; i++) {    // traerse array
             snake[i] = new Location(Globals.BLANK,Globals.BLANK,Globals.STOP);
         }
-        int startRow        = maxRows    / 2;
+        int startRow        = maxRows    / 2;       // center snake head 
         int startColumn     = maxColumns / 2;
         snake[Globals.HEAD] = new Location(startRow,startColumn,Globals.STOP);
     }

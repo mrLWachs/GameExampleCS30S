@@ -4,7 +4,7 @@ package grid3;
 
  
 /**
- * LLocation.java - stores and adjusts an object's location
+ * Location.java - stores and adjusts an object's location
  *
  * @author Mr. Wachs
  * @since Jan. 10, 2020, 3:49:42 p.m.
@@ -12,19 +12,11 @@ package grid3;
 public class Location 
 {
 
-    /** 
-     * The row location on the grid
-     */
-    public int row;
-    
-    /** 
-     * The column location on the grid
-     */
+    /** The row location on the grid */
+    public int row;    
+    /** The column location on the grid */
     public int column;
-    
-    /** 
-     * The direction of travel 
-     */
+    /** The direction of travel */
     public int direction;
     
     /**

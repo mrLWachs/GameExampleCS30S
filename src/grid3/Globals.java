@@ -2,13 +2,14 @@
 /** required package class namespace */
 package grid3;
 
+/** required imports */
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 
  
 /**
- * Globals.java - description
+ * Globals.java - all global environmental values for the snake application
  *
  * @author Mr. Wachs
  * @since Jan. 10, 2020, 3:27:54 p.m.

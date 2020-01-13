@@ -4,7 +4,7 @@ package grid3;
 
 
 /**
- * SnakeUI.java - description
+ * SnakeUI.java - the user interface for the snake game
  *
  * @author Mr. Wachs
  * @since Jan. 10, 2020, 2:42:55 p.m.
@@ -12,14 +12,14 @@ package grid3;
 public class SnakeUI extends javax.swing.JFrame 
 {
 
-    private GameEngine engine;
+    private UIEngine engine;          // encapsulated logic engine property
     
     /** 
      * Default constructor, creates new form SnakeUI 
      */
     public SnakeUI() {
         initComponents();
-        engine = new GameEngine(jPanel1,jList1,jScrollPane1,jLabel5,this);
+        engine = new UIEngine(jPanel1,jList1,jLabel5,this);
     }
 
     /** This method is called from within the constructor to
