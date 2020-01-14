@@ -73,7 +73,7 @@ public class GameImage
     public GameImage(JLabel label, String imageFile) {
         setLabel(label);                            // set parameter to property
         setImage(imageFile);                        // set image
-        resizeToContainer();                        // resize
+        resizeToContainer(true);                    // resize
     }
     
     /**
@@ -90,7 +90,7 @@ public class GameImage
                      int width, int height) {
         setLabel(label);                            // set parameter to property
         setImage(spriteSheet, x, y, width, height); // set image from sheet
-        resizeToContainer();                        // resize
+        resizeToContainer(true);                    // resize
     }
       
     /** 
@@ -117,13 +117,16 @@ public class GameImage
      */
     public void resize(int width, int height) {
         label.setSize(width, height);                   // resize label
-        resizeToContainer();                            // resize image
+        resizeToContainer(true);                        // resize image
     }
     
     /** 
      * Resizes the image inside the label to match the size of the label 
+     * 
+     * @param state true if it should resize, otherwise false
      */
-    public void resizeToContainer() {
+    public void resizeToContainer(boolean state) {
+        if (state == false) return;                     // immediate exit
         int       width         = label.getWidth();     // get label width
         int       height        = label.getHeight();    // get label height
         ImageIcon originalIcon  = (ImageIcon)label.getIcon();   // get icon
@@ -176,7 +179,7 @@ public class GameImage
         icon = new ImageIcon(getClass().getResource(imageFile));    // set icon
         label.setIcon(icon);                    // set icon to label
         show();                                 // display picturebox 
-        resizeToContainer();                    // resize
+        resizeToContainer(true);                // resize
     }
     
     /**
@@ -213,7 +216,7 @@ public class GameImage
             System.out.println("File convert error: " + ex.toString());
         }
         show();                                 // display picturebox 
-        resizeToContainer();                    // resize
+        resizeToContainer(true);                // resize
     }
     
     /**

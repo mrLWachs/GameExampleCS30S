@@ -160,15 +160,17 @@ public class Animation
         for (int i = 0; i < frames.length; i++) {       // traverse frames
             frames[i].resize(width, height);            // resize each frame
         }
-        resizeToContainer();                            // resize images
+        resizeToContainer(true);                        // resize images
     }
     
     /** 
      * Resizes image for all animation frames to the hitbox container 
+     * 
+     * @param state true if it should resize, otherwise false
      */
-    public void resizeToContainer() {
+    public void resizeToContainer(boolean state) {
         for (int i = 0; i < frames.length; i++) {       // traverse frames
-            frames[i].resizeToContainer();              // resize each frame
+            frames[i].resizeToContainer(state);         // resize each frame
         }
     }
     

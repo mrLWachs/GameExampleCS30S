@@ -151,15 +151,19 @@ public class Sprite
         for (int i = 0; i < animations.length; i++) {   // traverse animations
             animations[i].resize(width,height);         // resize each animation
         }
-        resizeToContainer();                            // resize images
+        resizeToContainer(true);                        // resize images
     }
     
-    /** Resizes all the images and animations to the hitbox container */
-    public void resizeToContainer() {
-        gameImage.resizeToContainer();                 // resize image
+    /** 
+     * Resizes all the images and animations to the hitbox container 
+     * 
+     * @param state true if it should resize, otherwise false
+     */
+    public void resizeToContainer(boolean state) {
+        gameImage.resizeToContainer(state);             // resize image
         if (animations == null) return;                 // error trap
         for (int i = 0; i < animations.length; i++) {   // traverse animations
-            animations[i].resizeToContainer();          // resize images
+            animations[i].resizeToContainer(state);     // resize images
         }
     }
     
